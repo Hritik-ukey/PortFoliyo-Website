@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise Clone</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .text>div {
+            font-weight: bold;
+            font-size: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .text>div:nth-child(1) {
+            animation-delay: 0s;
+            /* No delay for the first div */
+        }
+
+        .text>div:nth-child(2) {
+            animation-delay: 1s;
+            /* 1 second delay for the second div */
+        }
+
+        .text>div:nth-child(3) {
+            animation-delay: 2s;
+            /* 2 second delay for the third div */
+        }
+
+        .text>div:nth-child(4) {
+            animation-delay: 3s;
+            /* 3 second delay for the fourth div */
+        }
+
+        .skills-heading {
+            opacity: 0;
+            animation: slideIn 4s forwards;
+        }
+
+        .skills {
+            font-weight: bold;
+            font-size: 3rem;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+            margin-bottom: 20px;
+            color: blue;
+        }
+
+        .skill {
+            font-weight: bold;
+            font-size: 3rem;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+            margin-bottom: 20px;
+            color: blue;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsiveness  */
+        @media screen and (max-width: 768px) {
+            .text>div {
+                font-size: 2rem;
+            }
+
+            .skills-heading,
+            .skills,
+            .skill {
+                font-size: 2rem;
+            }
+
+            .margin-bottom-color {
+                height: 15px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-container .item-1,
+            .footer-container .item-2,
+            .footer-container .item-3,
+            .footer-container .item-4 {
+                margin-bottom: 20px;
+            }
+        }
+        /* Responsiveness  */
+    </style>
+</head>
+
+<body class="bg-purple-500">
+    <header class="header bg-red-200">
+        <nav class="nav flex gap-96 justify-evenly font-bold text-xl m-2">
+            <span class="mx-4">Hritik_@123#</span>
+            <ul class="ul flex gap-8">
+                <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#">Home</a></li>
+                <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#">About</a></li>
+                <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#">Projects</a></li>
+                <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#">Skills</a></li>
+                <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#">Experience</a></li>
+                <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#"><button class="border-white bg-red-800 hover:text-red-500 rounded-full p-2 hover:underline">Contact Us</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bg-gray-500">
+        <div class="">
+            <div class="text flex justify-between items-center mr-2">
+                <div class="font-bold text-3xl">Hey, There</div>
+                <div class="font-bold text-3xl">I am a</div>
+                <div class="font-bold text-3xl">Full Stack</div>
+                <div class="font-bold text-3xl">Web Developer</div>
+                <div class="img">
+                    <img src="logo.webp" height="444" width="888" class="float-end rounded-lg">
+                </div>
+            </div>
+            <div class="margin-bottom-color bg-slate-200 w-full h-[25px]"></div>
+        </div>
+
+        <!-- About Sections -->
+        <Section class="bg-red-500">
+            <h2 class="skills-heading font-bold text-[3rem]">About</h2>
+
+            <div class="skill flex justify-center items-center text-[22px]">
+                <h1 class="mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab illo libero rerum
+                    reprehenderit quaerat. Molestias nesciunt, officia error totam tempora beatae?</h1>
+            </div>
+        </Section>
+        <!-- About Sections -->
+
+        <!-- Projects Section -->
+        <Section class="bg-red-500">
+            <h2 class="skills-heading font-bold text-[3rem]">Projects</h2>
+
+            <div class="skill flex justify-center items-center text-[22px]">
+                <h1 class="mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab illo libero rerum
+                    reprehenderit quaerat. Molestias nesciunt, officia error totam tempora beatae?</h1>
+            </div>
+        </Section>
+        <!-- Projects Section -->
+
+        <!-- Skills Sections -->
+        <Section class="bg-red-500">
+            <h2 class="skills-heading font-bold text-[3rem]">Skills</h2>
+
+            <div class="skill flex justify-center items-center">
+                <h1 class="mx-5">HTML</h1>
+                <h1 class="mx-6">CSS</h1>
+                <h1 class="mx-7">JavaScript</h1>
+                <h1 class="mx-8">Node.js</h1>
+                <h1 class="mx-9">React</h1>
+                <h1 class="mx-10">Next.js</h1>
+            </div>
+        </Section>
+        <!-- Skills Sections -->
+
+        <!-- Experience Sections -->
+        <Section class="bg-red-500">
+            <h2 class="skills-heading font-bold text-[3rem]">Experience</h2>
+
+            <div class="skill flex justify-center items-center">
+                <h1 class="mx-5">INDIGO:</h1>
+                <h1 class="mx-5 text-[44px]">(NON TECHNICAL) Customer Service Executive: (3 Months)</h1>
+            </div>
+        </Section>
+        <!-- Experience Sections -->
+
+    </main>
+
+    <footer class="bg-gray-500">
+        <div class="footer-container flex justify-between m-5 font-semibold text-xl">
+            <div class="item-1">Social Media
+                <div class="images flex">
+                    <img src="Img/Facebook.png" class="w-7 h-7 border-2 m-4 rounded-full hover:border-purple-700">
+                    <img src="Img/Instagram.png" class="w-7 h-7 border-2 m-4 rounded-full hover:border-purple-700">
+                    <img src="Img/Github.png" class="w-7 h-7 border-2 m-4 rounded-full hover:border-purple-700">
+                    <img src="Img/Linkedin.png" class="w-7 h-7 border-2 m-4 rounded-full hover:border-purple-700">
+                    <img src="Img/X.png" class="w-7 h-7 border-2 m-4 rounded-full hover:border-purple-700">
+                </div>
+            </div>
+            <div class="item-2 list-none">Connect
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer"><a href="#"></a>Facebook</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer"><a href="#"></a>Instagram</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer"><a href="#"></a>Twitter</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer"><a href="#"></a>Github</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer"><a href="#"></a>X/twitter</li>
+            </div>
+            <div class="item-3 list-none">Pages
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer">Home</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer">About</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer">Projects</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer">Skills</li>
+                <li class="m-2 underline hover:text-gray-500 cursor-pointer">Experience</li>
+            </div>
+            <div class="item-4 list-none">Stay up to Date
+                <li><input type="text" placeholder="Enter Your Email address..."
+                        class="bg-none border-none bg-cover border-r-4 mb-2 my-2 p-2"></li>
+                <li><button class="border-white bg-red-800 hover:text-red-500 rounded-full p-2 hover:underline">SIGN
+                        UP</button></li>
+            </div>
+        </div>
+        <div class="margin-bottom-color bg-black w-full h-[25px]">
+            <div class=" text-center text-white hover:text-slate-400">&copy; 2024 All rights reserved</div>
+        </div>
+    </footer>
+</body>
+
+</html>
