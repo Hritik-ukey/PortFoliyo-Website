@@ -84,21 +84,63 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-100%);
+                transform: translateX(-100%);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0);
             }
         }
+        @media screen and (max-width: 1200px) {
+
+            body{
+                overflow-x: hidden;
+                width: fit-content;
+            }
+            header{
+              width: 100%;
+            }
+            .ul, .flex{
+                flex-direction: column;
+                align-items: center;
+               
+            }
+            
+            .name{
+                display: none;
+            }
+            .text{
+                flex-direction: column;
+                margin: 5px;
+            }
+           .img{
+            object-fit: fill;
+           }
+           .footer-container, .item-1{
+            margin: 0 auto;
+             flex-direction: column;
+           }
+           .footer-container, .item-2{
+            margin: 0 auto;
+             flex-direction: column;
+           }
+           .footer-container, .item-3{
+            margin: 0 auto;
+             flex-direction: column;
+           }
+           .footer-container, .item-4{
+            margin: 0 auto;
+             flex-direction: column;
+           }
+}
     </style>
 </head>
 
 <body class="bg-purple-500">
     <header class="header bg-red-200">
         <nav class="nav flex gap-96 justify-evenly font-bold text-xl m-2">
-            <span class="mx-4">Hritik_@123#</span>
+            <span class="mx-4 name">Hritik_@123#</span>
             <ul class="ul flex gap-8">
                 <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#">Home</a></li>
                 <li class=" hover:text-[21px] hover:text-neutral-700"><a href="#">About</a></li>
@@ -112,7 +154,7 @@
         </nav>
     </header>
 
-    <main class="bg-gray-500">
+    <main class="bg-gray-500 main">
         <div class="">
             <div class="text flex justify-between items-center mr-2">
                 <div class="font-bold text-3xl">Hey, There</div>
@@ -127,7 +169,7 @@
         </div>
 
         <!-- About Sections -->
-        <Section class="bg-red-500">
+        <Section class="About bg-red-500">
             <h2 class="skills-heading font-bold text-[3rem]">About</h2>
 
             <div class="skill flex justify-center items-center text-[22px]">
@@ -144,7 +186,7 @@
         <!-- About Sections -->
 
         <!-- Projects Section -->
-        <Section class="bg-red-500">
+        <Section class="bg-red-500 Projects">
             <h2 class="skills-heading font-bold text-[3rem]">Projects</h2>
 
             <div class="skill flex justify-center items-center text-[22px]">
@@ -159,7 +201,7 @@
         <!-- Projects Section -->
 
         <!-- Skills Sections -->
-        <Section class="bg-red-500">
+        <Section class="bg-red-500 Skills">
             <h2 class="skills-heading font-bold text-[3rem]">Skills</h2>
 
             <div class="skill flex justify-center items-center">
@@ -174,7 +216,7 @@
         <!-- Skills Sections -->
 
         <!-- Experience Sections -->
-        <Section class="bg-red-500">
+        <Section class="bg-red-500 Experience">
             <h2 class="skills-heading font-bold text-[3rem]">Experience</h2>
 
             <div class="skill flex justify-center items-center">
@@ -186,7 +228,7 @@
 
     </main>
 
-    <footer class="bg-gray-500">
+    <footer class="bg-gray-500 footer">
         <div class="footer-container flex justify-between m-5 font-semibold text-xl">
             <div class="item-1">Social Media
                 <div class="images flex">
